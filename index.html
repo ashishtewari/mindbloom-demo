@@ -225,6 +225,71 @@ html,body{height:100%;background:#e8d8cc;display:flex;justify-content:center;ali
 .signout-btn{background:none;border:2px solid var(--border);border-radius:20px;padding:5px 14px;font-family:'Quicksand',sans-serif;font-size:13px;font-weight:700;color:var(--text-muted);cursor:pointer;}
 .contact-btn{width:100%;padding:16px;border-radius:var(--radius-sm);border:none;background:linear-gradient(135deg,var(--secondary),var(--secondary-soft));font-family:'Quicksand',sans-serif;font-size:15px;font-weight:700;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 16px rgba(168,216,234,0.4);margin-top:4px;}
 .contact-btn:active{transform:scale(0.97);}
+
+/* ADMIN SCREEN */
+#adminScreen{background:var(--bg);}
+.admin-scroll{flex:1;overflow-y:auto;padding:20px 20px 32px;}
+.admin-scroll::-webkit-scrollbar{display:none;}
+.admin-hero{background:linear-gradient(135deg,var(--purple-soft),var(--primary-soft));border-radius:var(--radius);padding:20px;margin-bottom:16px;}
+.admin-kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;}
+.admin-kpi{background:rgba(255,255,255,0.7);border-radius:var(--radius-sm);padding:12px 8px;text-align:center;}
+.admin-kpi-val{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;}
+.admin-kpi-lbl{font-size:10px;color:var(--text-muted);font-weight:700;margin-top:1px;}
+.school-card{background:var(--surface);border-radius:var(--radius);padding:18px;margin-bottom:12px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border:2.5px solid transparent;}
+.school-card:active{transform:scale(0.97);}
+.school-card.selected{border-color:var(--purple);}
+.school-top{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
+.school-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.school-meta{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.school-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.school-stat{background:var(--bg);border-radius:10px;padding:10px 6px;text-align:center;}
+.school-stat-val{font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;}
+.school-stat-lbl{font-size:10px;color:var(--text-muted);font-weight:600;margin-top:1px;}
+.school-detail-panel{display:none;}
+.school-detail-panel.visible{display:block;}
+.back-school-btn{display:flex;align-items:center;gap:6px;background:none;border:none;font-family:'Quicksand',sans-serif;font-weight:700;font-size:14px;color:var(--text-muted);cursor:pointer;margin-bottom:16px;padding:0;}
+.class-table{width:100%;border-collapse:collapse;margin-top:4px;}
+.class-table th{font-size:10px;font-weight:800;color:var(--text-muted);text-align:left;padding:6px 4px;border-bottom:2px solid var(--border);}
+.class-table td{font-size:12px;font-weight:600;color:var(--text);padding:9px 4px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.class-table tr:last-child td{border-bottom:none;}
+.mini-bar-bg{height:7px;background:var(--border);border-radius:6px;overflow:hidden;min-width:40px;}
+.mini-bar-fill{height:100%;border-radius:6px;}
+.class-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;}
+
+/* TEACHER SCREEN */
+#teacherScreen{background:var(--bg);}
+.teacher-scroll{flex:1;overflow-y:auto;padding:20px 20px 32px;}
+.teacher-scroll::-webkit-scrollbar{display:none;}
+.teacher-hero{background:linear-gradient(135deg,var(--secondary-soft),var(--purple-soft));border-radius:var(--radius);padding:20px 20px 16px;margin-bottom:16px;}
+.teacher-hero-top{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.teacher-avatar{width:56px;height:56px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:26px;border:3px solid #fff;box-shadow:0 4px 14px rgba(168,216,234,0.4);flex-shrink:0;}
+.t-kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.t-kpi{background:rgba(255,255,255,0.7);border-radius:var(--radius-sm);padding:12px 8px;text-align:center;}
+.t-kpi-val{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;}
+.t-kpi-lbl{font-size:10px;color:var(--text-muted);font-weight:700;margin-top:1px;}
+.period-tabs{display:flex;gap:6px;margin-bottom:16px;}
+.period-tab{flex:1;padding:8px 0;border-radius:20px;border:2px solid var(--border);background:var(--surface);font-family:'Quicksand',sans-serif;font-weight:700;font-size:13px;color:var(--text-muted);cursor:pointer;transition:all 0.2s;text-align:center;}
+.period-tab.active{background:var(--secondary);border-color:var(--secondary);color:var(--text);}
+.t-bar-chart{display:flex;gap:6px;align-items:flex-end;height:100px;margin:10px 0 4px;}
+.t-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.t-bar{width:100%;border-radius:5px 5px 0 0;transition:height 0.5s;min-height:4px;}
+.t-bar-lbl{font-size:9px;color:var(--text-muted);font-weight:700;text-align:center;}
+.t-bar-val{font-size:10px;font-weight:900;color:var(--text);}
+.tool-effect-row{background:var(--surface);border-radius:var(--radius-sm);padding:14px;margin-bottom:10px;box-shadow:0 2px 10px rgba(180,120,80,0.06);}
+.tool-effect-top{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tool-effect-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.tool-effect-name{font-size:14px;font-weight:700;color:var(--text);}
+.tool-effect-uses{font-size:11px;color:var(--text-muted);}
+.effect-meter-bg{flex:1;height:8px;background:var(--border);border-radius:10px;overflow:hidden;}
+.effect-meter-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--accent));}
+.before-after{display:flex;gap:8px;margin-top:8px;}
+.ba-box{flex:1;border-radius:8px;padding:8px;text-align:center;}
+.ba-val{font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;}
+.ba-lbl{font-size:10px;font-weight:700;color:var(--text-muted);margin-top:1px;}
+.student-at-risk{background:var(--surface);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:10px;box-shadow:0 2px 10px rgba(180,120,80,0.06);}
+.risk-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.mood-streak-row{display:flex;gap:3px;margin-top:4px;}
+.mood-streak-dot{width:16px;height:16px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;}
 </style>
 </head>
 <body>
@@ -245,6 +310,24 @@ html,body{height:100%;background:#e8d8cc;display:flex;justify-content:center;ali
   </div>
 </div>
 
+<!-- TEACHER SCREEN -->
+<!-- ADMIN SCREEN -->
+<div id="adminScreen" class="screen">
+  <div class="app-header">
+    <div class="app-logo">Mind<span>Bloom</span> 🌸</div>
+    <button class="signout-btn" onclick="signOut()">Sign Out</button>
+  </div>
+  <div class="admin-scroll" id="adminContent"></div>
+</div>
+
+<div id="teacherScreen" class="screen">
+  <div class="app-header">
+    <div class="app-logo">Mind<span>Bloom</span> 🌸</div>
+    <button class="signout-btn" onclick="signOut()">Sign Out</button>
+  </div>
+  <div class="teacher-scroll" id="teacherContent"></div>
+</div>
+
 <!-- PARENT SCREEN -->
 <div id="parentScreen" class="screen">
   <div class="app-header">
@@ -261,6 +344,7 @@ html,body{height:100%;background:#e8d8cc;display:flex;justify-content:center;ali
     <div style="display:flex;align-items:center;gap:10px;">
       <div class="coins-badge">🪙 <span id="coinCount">340</span></div>
       <button class="profile-btn" onclick="showProfile()">👤</button>
+      <button class="signout-btn" onclick="signOut()">Sign Out</button>
     </div>
   </div>
 
@@ -495,6 +579,12 @@ function loginAs(role,name,avatar){
   if(role==='parent'){
     document.getElementById('parentScreen').classList.add('active');
     renderParentDashboard();
+  } else if(role==='teacher'){
+    document.getElementById('teacherScreen').classList.add('active');
+    renderTeacherDashboard('day');
+  } else if(role==='admin'){
+    document.getElementById('adminScreen').classList.add('active');
+    renderAdminHome();
   } else {
     document.getElementById('mainScreen').classList.add('active');
     const h=new Date().getHours();
@@ -505,8 +595,7 @@ function loginAs(role,name,avatar){
 }
 
 function signOut(){
-  document.getElementById('parentScreen').classList.remove('active');
-  document.getElementById('mainScreen').classList.remove('active');
+  ['parentScreen','teacherScreen','adminScreen','mainScreen'].forEach(id=>document.getElementById(id).classList.remove('active'));
   document.getElementById('loginScreen').classList.add('active');
 }
 
@@ -1011,6 +1100,523 @@ function showProfile(){
         <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:8px;">Your most used tools:</div>
         <div>${topTools||'<span style="font-size:13px;color:var(--text-muted)">None yet</span>'}</div>
       </div>
+    </div>
+  `;
+}
+
+// ===== TEACHER DASHBOARD =====
+const teacherData = {
+  students:[
+    {name:'Alex J.',  avatar:'🎒', grade:'8A', tracked:{day:true,  week:[1,1,1,1,0,1,1], month:Array(30).fill(0).map((_,i)=>i%5===4?0:1)}, moods:{day:'ok',      week:['ok','stress','ok','happy','ok','overwhelmed','ok'],          month:['ok','stress','happy','overwhelmed','ok','ok','stress','happy','ok','ok','stress','ok','happy','ok','ok','stress','ok','happy','ok','ok','ok','happy','stress','ok','overwhelmed','ok','happy','ok','stress','ok']}, scores:{day:7, week:[7,5,8,9,7,3,8], month:[7,5,9,3,7,8,5,9,7,7,5,7,9,7,8,4,7,9,7,8,7,9,5,7,3,8,9,7,5,8]}},
+    {name:'Priya M.', avatar:'🌸', grade:'8A', tracked:{day:true,  week:[1,1,0,1,1,1,1], month:Array(30).fill(0).map((_,i)=>i%8===7?0:1)}, moods:{day:'happy',    week:['happy','happy','ok','happy','happy','ok','happy'],           month:['happy','ok','happy','happy','ok','happy','happy','ok','happy','happy','ok','happy','happy','happy','ok','happy','ok','happy','happy','happy','ok','happy','happy','ok','happy','ok','happy','happy','ok','happy']}, scores:{day:9, week:[9,8,7,9,8,9,9], month:[9,8,9,9,8,9,8,7,9,9,8,9,9,9,8,9,8,9,9,9,8,9,9,8,9,8,9,9,8,9]}},
+    {name:'Rohan K.', avatar:'⚽', grade:'8B', tracked:{day:false, week:[0,1,1,0,1,1,0], month:Array(30).fill(0).map((_,i)=>i%3===2?0:1)}, moods:{day:'stress',   week:['stress','overwhelmed','stress','stress','overwhelmed','stress','ok'], month:['stress','overwhelmed','stress','stress','ok','stress','overwhelmed','stress','ok','stress','stress','overwhelmed','stress','ok','stress','stress','overwhelmed','ok','stress','overwhelmed','stress','ok','stress','stress','overwhelmed','stress','ok','stress','stress','overwhelmed']}, scores:{day:4, week:[4,3,5,4,3,5,6], month:[4,3,5,4,6,4,3,5,6,4,4,3,5,6,4,4,3,6,4,3,5,6,4,4,3,5,6,4,4,3]}},
+    {name:'Sara L.',  avatar:'🎨', grade:'8B', tracked:{day:true,  week:[1,1,1,1,1,1,1], month:Array(30).fill(1)},                          moods:{day:'ok',      week:['ok','ok','stress','ok','ok','ok','happy'],                month:['ok','stress','ok','ok','ok','stress','ok','ok','happy','ok','stress','ok','ok','ok','stress','ok','ok','ok','happy','ok','ok','stress','ok','ok','ok','ok','happy','ok','stress','ok']}, scores:{day:7, week:[7,7,5,8,7,8,9], month:[7,5,7,8,7,5,7,8,9,7,5,7,8,7,5,7,8,8,9,7,7,5,7,7,8,8,9,7,5,7]}},
+    {name:'Dev P.',   avatar:'🎮', grade:'8A', tracked:{day:true,  week:[1,0,1,1,0,1,1], month:Array(30).fill(0).map((_,i)=>i%6===5?0:1)}, moods:{day:'overwhelmed',week:['overwhelmed','ok','overwhelmed','stress','ok','overwhelmed','stress'],month:['overwhelmed','ok','stress','overwhelmed','ok','stress','overwhelmed','ok','stress','overwhelmed','ok','overwhelmed','stress','ok','overwhelmed','stress','ok','overwhelmed','stress','ok','overwhelmed','ok','stress','overwhelmed','ok','stress','ok','overwhelmed','stress','ok']}, scores:{day:3, week:[3,6,3,4,7,3,5], month:[3,6,4,3,7,4,3,6,4,3,6,3,4,7,3,4,6,3,4,6,3,7,4,3,6,5,6,3,4,6]}},
+    {name:'Nia T.',   avatar:'🌻', grade:'8B', tracked:{day:true,  week:[1,1,1,1,1,0,1], month:Array(30).fill(0).map((_,i)=>i%9===8?0:1)}, moods:{day:'happy',    week:['ok','happy','happy','ok','happy','ok','happy'],              month:['happy','ok','happy','happy','ok','happy','ok','happy','ok','happy','happy','ok','happy','happy','ok','happy','ok','happy','ok','happy','happy','ok','happy','ok','happy','ok','happy','happy','ok','happy']}, scores:{day:8, week:[7,9,8,8,9,7,9], month:[9,7,9,9,7,8,7,9,7,9,9,8,9,9,7,9,7,9,7,9,8,8,9,7,9,7,9,9,8,9]}},
+  ],
+  toolUsage:{
+    day:   {Breathing:8, Journaling:5, Music:11, Meditate:3, Dance:4, Sing:2, Mirror:1},
+    week:  {Breathing:42,Journaling:28,Music:56, Meditate:14,Dance:19,Sing:9, Mirror:5},
+    month: {Breathing:180,Journaling:110,Music:230,Meditate:55,Dance:78,Sing:34,Mirror:18},
+  },
+  toolEffect:{
+    Breathing: {icon:'🫁', color:'var(--secondary-soft)', before:3.8, after:6.9},
+    Music:     {icon:'🎵', color:'var(--purple-soft)',    before:4.2, after:7.4},
+    Journaling:{icon:'📝', color:'var(--accent-soft)',    before:3.5, after:6.2},
+    Dance:     {icon:'💃', color:'var(--primary-soft)',   before:4.0, after:7.1},
+    Meditate:  {icon:'🧘', color:'var(--yellow-soft)',    before:3.2, after:6.5},
+    Sing:      {icon:'🎤', color:'var(--yellow-soft)',    before:4.5, after:7.0},
+    Mirror:    {icon:'🪞', color:'var(--secondary-soft)', before:3.9, after:6.3},
+  },
+};
+
+function renderTeacherDashboard(period){
+  const moodEmoji={ok:'😊',stress:'😰',overwhelmed:'😵',dontknow:'🤔',happy:'😄'};
+  const moodColor={happy:'var(--accent)',ok:'var(--secondary)',stress:'var(--yellow)',overwhelmed:'var(--primary)',dontknow:'var(--purple)'};
+  const moodBg={happy:'var(--accent-soft)',ok:'var(--secondary-soft)',stress:'var(--yellow-soft)',overwhelmed:'var(--primary-soft)',dontknow:'var(--purple-soft)'};
+  const total=teacherData.students.length;
+
+  // Tracking counts per period
+  let trackingCount, trackingLabels, trackingVals;
+  if(period==='day'){
+    trackingCount=teacherData.students.filter(s=>s.tracked.day).length;
+    trackingLabels=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    trackingVals=teacherData.students.reduce((acc,s)=>{s.tracked.week.forEach((v,i)=>{acc[i]+=v;});return acc;},Array(7).fill(0));
+  } else if(period==='week'){
+    trackingCount=teacherData.students.filter(s=>s.tracked.week.some(v=>v)).length;
+    trackingLabels=['Wk 1','Wk 2','Wk 3','Wk 4'];
+    const byWeek=[[],[],[],[]];
+    teacherData.students.forEach(s=>s.tracked.month.forEach((v,i)=>byWeek[Math.min(Math.floor(i/7),3)].push(v)));
+    trackingVals=byWeek.map(w=>Math.round(w.reduce((a,b)=>a+b,0)/w.length*total));
+  } else {
+    trackingCount=teacherData.students.filter(s=>s.tracked.month.some(v=>v)).length;
+    trackingLabels=['W1','W2','W3','W4'];
+    const byWeek=[[],[],[],[]];
+    teacherData.students.forEach(s=>s.tracked.month.forEach((v,i)=>byWeek[Math.min(Math.floor(i/7),3)].push(v)));
+    trackingVals=byWeek.map(w=>Math.round(w.reduce((a,b)=>a+b,0)/w.length*total));
+  }
+
+  // Mood distribution across class
+  const classMoodTally={};
+  teacherData.students.forEach(s=>{
+    const arr=period==='day'?[s.moods.day]:period==='week'?s.moods.week:s.moods.month;
+    arr.forEach(m=>{classMoodTally[m]=(classMoodTally[m]||0)+1;});
+  });
+  const totalMoodEntries=Object.values(classMoodTally).reduce((a,b)=>a+b,0);
+
+  // KPIs
+  const allScores=teacherData.students.flatMap(s=>period==='day'?[s.scores.day]:period==='week'?s.scores.week:s.scores.month);
+  const avgClassScore=(allScores.reduce((a,b)=>a+b,0)/allScores.length).toFixed(1);
+  const studentsAtRisk=teacherData.students.filter(s=>{
+    const sc=period==='day'?[s.scores.day]:period==='week'?s.scores.week:s.scores.month;
+    return sc.filter(v=>v<=4).length>=(period==='day'?1:period==='week'?2:5);
+  }).length;
+
+  // Tracking bar chart
+  const maxTrack=Math.max(...trackingVals,1);
+  const trackBars=trackingVals.map((v,i)=>{
+    const h=Math.max((v/total)*88,4);
+    const col=v/total>=0.7?'var(--accent)':v/total>=0.4?'var(--yellow)':'var(--primary)';
+    return `<div class="t-bar-wrap">
+      <div class="t-bar-val">${v}</div>
+      <div class="t-bar" style="height:${h}px;background:${col};"></div>
+      <div class="t-bar-lbl">${trackingLabels[i]}</div>
+    </div>`;
+  }).join('');
+
+  // Tool usage bars
+  const toolData=teacherData.toolUsage[period];
+  const maxTool=Math.max(...Object.values(toolData));
+  const toolBars=Object.entries(toolData).sort((a,b)=>b[1]-a[1]).map(([name,val])=>{
+    const h=Math.max((val/maxTool)*88,4);
+    const t=teacherData.toolEffect[name];
+    const bg=t?t.color:'var(--surface2)';
+    const icon=t?t.icon:'🛠️';
+    return `<div class="t-bar-wrap">
+      <div class="t-bar-val">${val}</div>
+      <div class="t-bar" style="height:${h}px;background:${bg};border:1.5px solid rgba(0,0,0,0.06);"></div>
+      <div class="t-bar-lbl">${icon}</div>
+    </div>`;
+  }).join('');
+
+  // Tool effectiveness rows
+  const toolEffectRows=Object.entries(teacherData.toolEffect).map(([name,t])=>{
+    const improvement=((t.after-t.before)/10*100).toFixed(0);
+    const uses=toolData[name]||0;
+    return `<div class="tool-effect-row">
+      <div class="tool-effect-top">
+        <div class="tool-effect-icon" style="background:${t.color}">${t.icon}</div>
+        <div>
+          <div class="tool-effect-name">${name}</div>
+          <div class="tool-effect-uses">${uses} uses · ${improvement}% avg mood lift</div>
+        </div>
+        <div style="margin-left:auto;font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:var(--accent)">+${improvement}%</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="font-size:10px;color:var(--text-muted);font-weight:700;width:38px;">Before</div>
+        <div class="effect-meter-bg" style="background:var(--primary-soft)"><div class="effect-meter-fill" style="width:${t.before*10}%;background:var(--primary);"></div></div>
+        <div style="font-size:11px;font-weight:900;color:var(--primary);width:28px;">${t.before}</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:5px;">
+        <div style="font-size:10px;color:var(--text-muted);font-weight:700;width:38px;">After</div>
+        <div class="effect-meter-bg"><div class="effect-meter-fill" style="width:${t.after*10}%;"></div></div>
+        <div style="font-size:11px;font-weight:900;color:var(--accent);width:28px;">${t.after}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Mood distribution rows
+  const moodOrder=['happy','ok','stress','overwhelmed'];
+  const moodLabel={happy:'😄 Happy',ok:'😊 Ok',stress:'😰 Stressed',overwhelmed:'😵 Overwhelmed'};
+  const moodDistRows=moodOrder.map(m=>{
+    const cnt=classMoodTally[m]||0;
+    const pct=totalMoodEntries>0?Math.round((cnt/totalMoodEntries)*100):0;
+    return `<div class="dist-row">
+      <div class="dist-label">${moodLabel[m]}</div>
+      <div class="dist-bar-bg"><div class="dist-bar-fill" style="width:${pct}%;background:${moodColor[m]}"></div></div>
+      <div class="dist-count">${pct}%</div>
+    </div>`;
+  }).join('');
+
+  // Students needing attention
+  const atRiskRows=teacherData.students.filter(s=>{
+    const sc=period==='day'?[s.scores.day]:period==='week'?s.scores.week:s.scores.month;
+    return sc.some(v=>v<=4);
+  }).map(s=>{
+    const sc=period==='day'?[s.scores.day]:period==='week'?s.scores.week:s.scores.month;
+    const avgSc=(sc.reduce((a,b)=>a+b,0)/sc.length).toFixed(1);
+    const lowCount=sc.filter(v=>v<=4).length;
+    const isHigh=avgSc>=7;
+    const dotColor=avgSc<5?'var(--primary)':avgSc<7?'var(--yellow)':'var(--accent)';
+    const recentMoods=(period==='day'?[s.moods.day]:period==='week'?s.moods.week.slice(-5):s.moods.month.slice(-7));
+    const streakDots=recentMoods.map(m=>`<div class="mood-streak-dot" style="background:${moodBg[m]}">${moodEmoji[m]}</div>`).join('');
+    return `<div class="student-at-risk">
+      <div style="font-size:24px">${s.avatar}</div>
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:6px;">
+          <div style="font-size:13px;font-weight:700;color:var(--text)">${s.name}</div>
+          <div class="risk-dot" style="background:${dotColor}"></div>
+          <div style="font-size:11px;color:var(--text-muted)">${s.grade}</div>
+        </div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Avg ${avgSc}/10 · ${lowCount} difficult day${lowCount!==1?'s':''}</div>
+        <div class="mood-streak-row" style="margin-top:5px;">${streakDots}</div>
+      </div>
+      <button style="background:var(--secondary-soft);border:none;border-radius:16px;padding:6px 10px;font-family:'Quicksand',sans-serif;font-size:11px;font-weight:700;color:var(--text);cursor:pointer;" onclick="showToast('Opening ${s.name}\'s profile...')">View</button>
+    </div>`;
+  }).join('') || `<div style="font-size:13px;color:var(--text-muted);padding:8px 0;">All students are doing well 🎉</div>`;
+
+  const periodLabel={day:'Today',week:'This Week',month:'This Month'};
+
+  document.getElementById('teacherContent').innerHTML=`
+    <div class="teacher-hero">
+      <div class="teacher-hero-top">
+        <div class="teacher-avatar">📚</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:var(--text)">Ms. Priya Sharma</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:1px;">Class 8A & 8B · Sunshine Middle School</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">📊 ${periodLabel[period]} Overview</div>
+        </div>
+      </div>
+      <div class="t-kpi-row">
+        <div class="t-kpi">
+          <div class="t-kpi-val" style="color:var(--secondary)">${trackingCount}<span style="font-size:13px">/${total}</span></div>
+          <div class="t-kpi-lbl">Tracking Mood</div>
+        </div>
+        <div class="t-kpi">
+          <div class="t-kpi-val" style="color:var(--primary)">${avgClassScore}<span style="font-size:13px">/10</span></div>
+          <div class="t-kpi-lbl">Class Avg Score</div>
+        </div>
+        <div class="t-kpi">
+          <div class="t-kpi-val" style="color:${studentsAtRisk>0?'var(--primary)':'var(--accent)'}">${studentsAtRisk}</div>
+          <div class="t-kpi-lbl">Need Attention</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="period-tabs">
+      <button class="period-tab ${period==='day'?'active':''}" onclick="renderTeacherDashboard('day')">Day</button>
+      <button class="period-tab ${period==='week'?'active':''}" onclick="renderTeacherDashboard('week')">Week</button>
+      <button class="period-tab ${period==='month'?'active':''}" onclick="renderTeacherDashboard('month')">Month</button>
+    </div>
+
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:4px;">👥 Students Tracking Mood</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">🟢 70%+ · 🟡 40–69% · 🔴 below 40% of class</div>
+      <div class="t-bar-chart">${trackBars}</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:6px;text-align:center;">${period==='day'?'Students per day this week':period==='week'?'Avg students per week':'Weekly average this month'}</div>
+    </div>
+
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:12px;">🎭 Class Mood Distribution</div>
+      ${moodDistRows}
+    </div>
+
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:4px;">🛠️ Tool Usage — ${periodLabel[period]}</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">Number of times each tool was used</div>
+      <div class="t-bar-chart">${toolBars}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;">
+        ${Object.entries(teacherData.toolEffect).map(([name,t])=>`<span style="font-size:11px;font-weight:700;color:var(--text-muted);display:flex;align-items:center;gap:3px;">${t.icon} ${name}</span>`).join('<span style="color:var(--border)">·</span>')}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:4px;">💡 How Tools Are Helping</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:14px;">Average mood score before and after each tool — out of 10</div>
+      ${toolEffectRows}
+    </div>
+
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:10px;">⚠️ Students Needing Attention</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;">🔴 Avg below 5 · 🟡 Avg 5–6 · 🟢 Improving</div>
+      ${atRiskRows}
+    </div>
+  `;
+}
+
+// ===== ADMIN DASHBOARD =====
+const adminData = {
+  schools:[
+    {
+      id:'s1', name:'Sunshine Middle School', location:'Bangalore, KA', icon:'☀️',
+      iconBg:'var(--yellow-soft)', since:'Jan 2024', plan:'Pro',
+      classes:[
+        { name:'Grade 6A', students:32, moodDaily:28, moodWeekly:30, moodMonthly:31,
+          modulesTotal:96,  modulesCompleted:72, modulesInProgress:18,
+          toolUsage:{Breathing:120,Music:95,Journaling:78,Dance:55,Meditate:40,Sing:22,Mirror:14},
+          toolEffect:{Breathing:{before:3.8,after:6.9},Music:{before:4.2,after:7.4},Journaling:{before:3.5,after:6.2},Dance:{before:4.0,after:7.1},Meditate:{before:3.2,after:6.5},Sing:{before:4.5,after:7.0},Mirror:{before:3.9,after:6.3}} },
+        { name:'Grade 6B', students:30, moodDaily:22, moodWeekly:26, moodMonthly:29,
+          modulesTotal:90,  modulesCompleted:54, modulesInProgress:24,
+          toolUsage:{Breathing:98,Music:110,Journaling:60,Dance:48,Meditate:30,Sing:18,Mirror:10},
+          toolEffect:{Breathing:{before:4.0,after:7.0},Music:{before:4.5,after:7.8},Journaling:{before:3.8,after:6.5},Dance:{before:4.2,after:7.2},Meditate:{before:3.5,after:6.8},Sing:{before:4.0,after:6.9},Mirror:{before:4.1,after:6.5}} },
+        { name:'Grade 7A', students:34, moodDaily:30, moodWeekly:32, moodMonthly:33,
+          modulesTotal:102, modulesCompleted:88, modulesInProgress:10,
+          toolUsage:{Breathing:140,Music:125,Journaling:90,Dance:62,Meditate:50,Sing:28,Mirror:20},
+          toolEffect:{Breathing:{before:3.5,after:6.8},Music:{before:4.0,after:7.5},Journaling:{before:3.2,after:6.0},Dance:{before:3.8,after:7.0},Meditate:{before:3.0,after:6.3},Sing:{before:4.2,after:6.8},Mirror:{before:3.7,after:6.2}} },
+        { name:'Grade 8A', students:28, moodDaily:24, moodWeekly:26, moodMonthly:27,
+          modulesTotal:84,  modulesCompleted:60, modulesInProgress:16,
+          toolUsage:{Breathing:105,Music:88,Journaling:72,Dance:40,Meditate:35,Sing:15,Mirror:12},
+          toolEffect:{Breathing:{before:4.1,after:7.1},Music:{before:4.3,after:7.6},Journaling:{before:3.6,after:6.4},Dance:{before:4.4,after:7.3},Meditate:{before:3.4,after:6.6},Sing:{before:4.6,after:7.1},Mirror:{before:4.0,after:6.4}} },
+        { name:'Grade 8B', students:29, moodDaily:20, moodWeekly:24, moodMonthly:28,
+          modulesTotal:87,  modulesCompleted:48, modulesInProgress:22,
+          toolUsage:{Breathing:88,Music:102,Journaling:55,Dance:44,Meditate:28,Sing:20,Mirror:8},
+          toolEffect:{Breathing:{before:4.2,after:7.0},Music:{before:4.6,after:7.7},Journaling:{before:3.9,after:6.3},Dance:{before:4.1,after:7.0},Meditate:{before:3.6,after:6.4},Sing:{before:4.3,after:6.7},Mirror:{before:4.2,after:6.2}} },
+      ]
+    },
+    {
+      id:'s2', name:'Greenfield High School', location:'Mumbai, MH', icon:'🌿',
+      iconBg:'var(--accent-soft)', since:'Mar 2024', plan:'Pro',
+      classes:[
+        { name:'Grade 9A', students:36, moodDaily:30, moodWeekly:33, moodMonthly:35,
+          modulesTotal:108, modulesCompleted:90, modulesInProgress:14,
+          toolUsage:{Breathing:155,Music:130,Journaling:100,Dance:70,Meditate:60,Sing:30,Mirror:22},
+          toolEffect:{Breathing:{before:3.6,after:7.0},Music:{before:4.1,after:7.6},Journaling:{before:3.3,after:6.3},Dance:{before:3.9,after:7.2},Meditate:{before:3.1,after:6.6},Sing:{before:4.3,after:7.1},Mirror:{before:3.8,after:6.4}} },
+        { name:'Grade 9B', students:35, moodDaily:28, moodWeekly:31, moodMonthly:34,
+          modulesTotal:105, modulesCompleted:80, modulesInProgress:18,
+          toolUsage:{Breathing:140,Music:118,Journaling:88,Dance:65,Meditate:52,Sing:26,Mirror:18},
+          toolEffect:{Breathing:{before:3.9,after:7.1},Music:{before:4.3,after:7.5},Journaling:{before:3.6,after:6.4},Dance:{before:4.1,after:7.1},Meditate:{before:3.3,after:6.5},Sing:{before:4.4,after:7.0},Mirror:{before:4.0,after:6.5}} },
+        { name:'Grade 10A', students:33, moodDaily:26, moodWeekly:30, moodMonthly:32,
+          modulesTotal:99,  modulesCompleted:70, modulesInProgress:20,
+          toolUsage:{Breathing:120,Music:105,Journaling:80,Dance:52,Meditate:44,Sing:22,Mirror:14},
+          toolEffect:{Breathing:{before:4.0,after:7.2},Music:{before:4.4,after:7.7},Journaling:{before:3.7,after:6.5},Dance:{before:4.2,after:7.3},Meditate:{before:3.5,after:6.7},Sing:{before:4.5,after:7.2},Mirror:{before:4.1,after:6.6}} },
+      ]
+    },
+    {
+      id:'s3', name:'Blue Horizon Academy', location:'Delhi, DL', icon:'🔵',
+      iconBg:'var(--secondary-soft)', since:'Jun 2024', plan:'Basic',
+      classes:[
+        { name:'Grade 7A', students:30, moodDaily:18, moodWeekly:22, moodMonthly:26,
+          modulesTotal:90,  modulesCompleted:42, modulesInProgress:28,
+          toolUsage:{Breathing:80,Music:90,Journaling:50,Dance:35,Meditate:22,Sing:14,Mirror:8},
+          toolEffect:{Breathing:{before:4.3,after:6.8},Music:{before:4.7,after:7.4},Journaling:{before:4.0,after:6.1},Dance:{before:4.4,after:6.9},Meditate:{before:3.8,after:6.3},Sing:{before:4.6,after:6.8},Mirror:{before:4.3,after:6.1}} },
+        { name:'Grade 7B', students:28, moodDaily:14, moodWeekly:18, moodMonthly:24,
+          modulesTotal:84,  modulesCompleted:30, modulesInProgress:32,
+          toolUsage:{Breathing:65,Music:78,Journaling:40,Dance:28,Meditate:18,Sing:10,Mirror:6},
+          toolEffect:{Breathing:{before:4.5,after:6.7},Music:{before:4.8,after:7.3},Journaling:{before:4.1,after:6.0},Dance:{before:4.6,after:6.8},Meditate:{before:4.0,after:6.2},Sing:{before:4.7,after:6.7},Mirror:{before:4.4,after:6.0}} },
+      ]
+    },
+    {
+      id:'s4', name:'Pinecrest Elementary', location:'Chennai, TN', icon:'🌲',
+      iconBg:'var(--accent-soft)', since:'Sep 2024', plan:'Starter',
+      classes:[
+        { name:'Grade 4A', students:25, moodDaily:20, moodWeekly:22, moodMonthly:24,
+          modulesTotal:75,  modulesCompleted:55, modulesInProgress:12,
+          toolUsage:{Breathing:70,Music:88,Journaling:45,Dance:60,Meditate:20,Sing:35,Mirror:8},
+          toolEffect:{Breathing:{before:3.7,after:6.6},Music:{before:4.0,after:7.2},Journaling:{before:3.4,after:6.0},Dance:{before:3.6,after:7.0},Meditate:{before:3.2,after:6.2},Sing:{before:4.2,after:6.8},Mirror:{before:3.8,after:6.1}} },
+        { name:'Grade 5A', students:26, moodDaily:22, moodWeekly:24, moodMonthly:25,
+          modulesTotal:78,  modulesCompleted:60, modulesInProgress:10,
+          toolUsage:{Breathing:75,Music:92,Journaling:48,Dance:64,Meditate:22,Sing:38,Mirror:9},
+          toolEffect:{Breathing:{before:3.6,after:6.7},Music:{before:4.1,after:7.3},Journaling:{before:3.5,after:6.1},Dance:{before:3.7,after:7.1},Meditate:{before:3.3,after:6.3},Sing:{before:4.3,after:6.9},Mirror:{before:3.9,after:6.2}} },
+      ]
+    },
+  ],
+};
+
+const toolIcons={Breathing:'🫁',Music:'🎵',Journaling:'📝',Dance:'💃',Meditate:'🧘',Sing:'🎤',Mirror:'🪞'};
+const toolColors={Breathing:'var(--secondary-soft)',Music:'var(--purple-soft)',Journaling:'var(--accent-soft)',Dance:'var(--primary-soft)',Meditate:'var(--yellow-soft)',Sing:'var(--yellow-soft)',Mirror:'var(--secondary-soft)'};
+
+function renderAdminHome(){
+  const schools=adminData.schools;
+  const totalStudents=schools.reduce((a,s)=>a+s.classes.reduce((b,c)=>b+c.students,0),0);
+  const totalClasses=schools.reduce((a,s)=>a+s.classes.length,0);
+  const planColors={Pro:'var(--purple-soft)',Basic:'var(--secondary-soft)',Starter:'var(--accent-soft)'};
+
+  const schoolCards=schools.map(s=>{
+    const totalStu=s.classes.reduce((a,c)=>a+c.students,0);
+    const totalTracking=s.classes.reduce((a,c)=>a+c.moodDaily,0);
+    const totalMods=s.classes.reduce((a,c)=>a+c.modulesCompleted,0);
+    const totalModsAll=s.classes.reduce((a,c)=>a+c.modulesTotal,0);
+    const trackPct=Math.round(totalTracking/totalStu*100);
+    const modPct=Math.round(totalMods/totalModsAll*100);
+    const trackColor=trackPct>=70?'var(--accent)':trackPct>=40?'var(--yellow)':'var(--primary)';
+    return `<div class="school-card" onclick="renderAdminSchoolDetail('${s.id}')">
+      <div class="school-top">
+        <div class="school-icon" style="background:${s.iconBg}">${s.icon}</div>
+        <div style="flex:1;">
+          <div style="font-family:'Nunito',sans-serif;font-size:16px;font-weight:900;color:var(--text)">${s.name}</div>
+          <div class="school-meta">${s.location} · Since ${s.since}</div>
+          <span class="class-badge" style="background:${planColors[s.plan]};color:var(--text);margin-top:4px;">${s.plan} Plan</span>
+        </div>
+        <span style="font-size:20px;color:var(--text-muted)">›</span>
+      </div>
+      <div class="school-stats-row">
+        <div class="school-stat"><div class="school-stat-val" style="color:var(--purple)">${s.classes.length}</div><div class="school-stat-lbl">Classes</div></div>
+        <div class="school-stat"><div class="school-stat-val" style="color:var(--primary)">${totalStu}</div><div class="school-stat-lbl">Students</div></div>
+        <div class="school-stat"><div class="school-stat-val" style="color:${trackColor}">${trackPct}%</div><div class="school-stat-lbl">Daily Mood</div></div>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-size:11px;font-weight:700;color:var(--text-muted)">Modules completed</span>
+          <span style="font-size:11px;font-weight:800;color:var(--text)">${modPct}%</span>
+        </div>
+        <div class="mini-bar-bg"><div class="mini-bar-fill" style="width:${modPct}%;background:linear-gradient(90deg,var(--primary),var(--purple));"></div></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('adminContent').innerHTML=`
+    <div class="admin-hero">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+        <div style="width:52px;height:52px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-size:24px;border:3px solid #fff;box-shadow:0 4px 14px rgba(201,177,240,0.4);">🛡️</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:var(--text)">School Admin</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:1px;">MindBloom Network · All Schools</div>
+        </div>
+      </div>
+      <div class="admin-kpi-row">
+        <div class="admin-kpi"><div class="admin-kpi-val" style="color:var(--purple)">${schools.length}</div><div class="admin-kpi-lbl">Schools</div></div>
+        <div class="admin-kpi"><div class="admin-kpi-val" style="color:var(--primary)">${totalStudents}</div><div class="admin-kpi-lbl">Students</div></div>
+        <div class="admin-kpi"><div class="admin-kpi-val" style="color:var(--secondary)">${totalClasses}</div><div class="admin-kpi-lbl">Classes</div></div>
+      </div>
+    </div>
+    <div class="section-title">🏫 Registered Schools</div>
+    ${schoolCards}
+  `;
+}
+
+function renderAdminSchoolDetail(schoolId){
+  window._adminSchool=schoolId;
+  _renderSchoolDetail(adminData.schools.find(s=>s.id===schoolId),'day');
+}
+
+function _renderSchoolDetail(school,period){
+  const periodKey={day:'moodDaily',week:'moodWeekly',month:'moodMonthly'};
+  const periodLabel={day:'Today',week:'This Week',month:'This Month'};
+  const allTools=Object.keys(toolIcons);
+
+  const moodRows=school.classes.map(c=>{
+    const val=c[periodKey[period]];
+    const pct=Math.round(val/c.students*100);
+    const col=pct>=70?'var(--accent)':pct>=40?'var(--yellow)':'var(--primary)';
+    return `<tr>
+      <td><span class="class-badge" style="background:var(--purple-soft);color:var(--purple)">${c.name}</span></td>
+      <td style="text-align:center;">${c.students}</td>
+      <td style="text-align:center;font-weight:800;color:${col}">${val}</td>
+      <td><div style="display:flex;align-items:center;gap:5px;">
+        <div class="mini-bar-bg" style="flex:1;"><div class="mini-bar-fill" style="width:${pct}%;background:${col};"></div></div>
+        <span style="font-size:11px;font-weight:800;color:${col};width:30px;">${pct}%</span>
+      </div></td>
+    </tr>`;
+  }).join('');
+
+  const moduleRows=school.classes.map(c=>{
+    const pct=Math.round(c.modulesCompleted/c.modulesTotal*100);
+    const inProg=Math.round(c.modulesInProgress/c.modulesTotal*100);
+    const locked=100-pct-inProg;
+    return `<tr>
+      <td><span class="class-badge" style="background:var(--purple-soft);color:var(--purple)">${c.name}</span></td>
+      <td style="text-align:center;">${c.modulesTotal}</td>
+      <td>
+        <div style="display:flex;height:8px;border-radius:6px;overflow:hidden;">
+          <div style="width:${pct}%;background:var(--accent);"></div>
+          <div style="width:${inProg}%;background:var(--yellow);"></div>
+          <div style="width:${locked}%;background:var(--border);"></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:4px;">
+          <span style="font-size:10px;font-weight:700;color:#4A8840;">✓ ${pct}%</span>
+          <span style="font-size:10px;font-weight:700;color:#8B6914;">▶ ${inProg}%</span>
+          <span style="font-size:10px;font-weight:700;color:var(--text-muted);">🔒 ${locked}%</span>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+
+  const toolClassRows=school.classes.map(c=>{
+    const maxUse=Math.max(...allTools.map(t=>c.toolUsage[t]||0),1);
+    const bars=allTools.map(t=>{
+      const v=c.toolUsage[t]||0;
+      const h=Math.max(Math.round((v/maxUse)*54),2);
+      return `<div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;">
+        <div style="font-size:9px;font-weight:800;color:var(--text);">${v}</div>
+        <div style="width:100%;height:${h}px;background:${toolColors[t]};border-radius:4px 4px 0 0;border:1px solid rgba(0,0,0,0.06);min-height:2px;"></div>
+        <div style="font-size:13px;">${toolIcons[t]}</div>
+      </div>`;
+    }).join('');
+    return `<div style="margin-bottom:14px;">
+      <div style="font-size:12px;font-weight:800;color:var(--text);margin-bottom:6px;">${c.name}</div>
+      <div style="display:flex;gap:4px;align-items:flex-end;height:80px;">${bars}</div>
+    </div>`;
+  }).join('');
+
+  const toolEffectRows=school.classes.map(c=>{
+    const bestTool=allTools.reduce((best,t)=>{
+      const lift=(c.toolEffect[t]?.after||0)-(c.toolEffect[t]?.before||0);
+      const bestLift=(c.toolEffect[best]?.after||0)-(c.toolEffect[best]?.before||0);
+      return lift>bestLift?t:best;
+    },allTools[0]);
+    const avgLift=(allTools.reduce((sum,t)=>{const e=c.toolEffect[t];return sum+(e?e.after-e.before:0);},0)/allTools.length).toFixed(1);
+    const rows=allTools.map(t=>{
+      const e=c.toolEffect[t]; if(!e) return '';
+      const lift=(e.after-e.before).toFixed(1);
+      const isBest=t===bestTool;
+      return `<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);">
+        <span style="font-size:15px;width:20px;">${toolIcons[t]}</span>
+        <span style="font-size:12px;font-weight:700;color:var(--text);flex:1;">${t}</span>
+        <div style="display:flex;align-items:center;gap:4px;flex:2;">
+          <span style="font-size:10px;color:var(--primary);font-weight:700;width:20px;">${e.before}</span>
+          <div style="flex:1;height:6px;background:var(--border);border-radius:6px;overflow:hidden;">
+            <div style="width:${e.after*10}%;height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:6px;"></div>
+          </div>
+          <span style="font-size:10px;color:var(--accent);font-weight:700;width:20px;">${e.after}</span>
+        </div>
+        <span style="font-size:11px;font-weight:900;color:${isBest?'var(--accent)':'var(--text-muted)'};width:30px;text-align:right;">+${lift}</span>
+      </div>`;
+    }).join('');
+    return `<div style="margin-bottom:16px;padding-bottom:4px;border-bottom:2px solid var(--border);">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+        <span style="font-size:12px;font-weight:800;color:var(--text);">${c.name}</span>
+        <span style="font-size:11px;background:var(--accent-soft);padding:3px 8px;border-radius:10px;font-weight:700;color:#4A8840;">Avg lift +${avgLift} pts · 🏆 ${toolIcons[bestTool]} ${bestTool}</span>
+      </div>
+      <div style="font-size:10px;color:var(--text-muted);margin-bottom:6px;">Score before → after using tool (out of 10)</div>
+      ${rows}
+    </div>`;
+  }).join('');
+
+  document.getElementById('adminContent').innerHTML=`
+    <button class="back-school-btn" onclick="renderAdminHome()">← All Schools</button>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+      <div style="width:48px;height:48px;border-radius:14px;background:${school.iconBg};display:flex;align-items:center;justify-content:center;font-size:24px;">${school.icon}</div>
+      <div>
+        <div style="font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;color:var(--text)">${school.name}</div>
+        <div style="font-size:12px;color:var(--text-muted);">${school.location} · ${school.classes.length} Classes · ${school.classes.reduce((a,c)=>a+c.students,0)} Students</div>
+      </div>
+    </div>
+    <div class="period-tabs">
+      <button class="period-tab ${period==='day'?'active':''}" onclick="_renderSchoolDetail(adminData.schools.find(s=>s.id==='${school.id}'),'day')">Day</button>
+      <button class="period-tab ${period==='week'?'active':''}" onclick="_renderSchoolDetail(adminData.schools.find(s=>s.id==='${school.id}'),'week')">Week</button>
+      <button class="period-tab ${period==='month'?'active':''}" onclick="_renderSchoolDetail(adminData.schools.find(s=>s.id==='${school.id}'),'month')">Month</button>
+    </div>
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:4px;">😊 Mood Tracking — ${periodLabel[period]}</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;">🟢 70%+ · 🟡 40–69% · 🔴 below 40% tracking rate</div>
+      <table class="class-table">
+        <thead><tr><th>Class</th><th style="text-align:center;">Total</th><th style="text-align:center;">Tracking</th><th>Rate</th></tr></thead>
+        <tbody>${moodRows}</tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:4px;">📖 Module Completion by Class</div>
+      <div style="display:flex;gap:12px;margin-bottom:10px;flex-wrap:wrap;">
+        <span style="font-size:11px;font-weight:700;color:#4A8840;">🟢 Completed</span>
+        <span style="font-size:11px;font-weight:700;color:#8B6914;">🟡 In Progress</span>
+        <span style="font-size:11px;font-weight:700;color:var(--text-muted);">⚪ Locked</span>
+      </div>
+      <table class="class-table">
+        <thead><tr><th>Class</th><th style="text-align:center;">Modules</th><th>Progress</th></tr></thead>
+        <tbody>${moduleRows}</tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:12px;">🛠️ Tool Usage by Class</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;">
+        ${allTools.map(t=>`<span style="font-size:11px;font-weight:700;color:var(--text-muted);display:flex;align-items:center;gap:3px;">${toolIcons[t]} ${t}</span>`).join('<span style="color:var(--border)"> · </span>')}
+      </div>
+      ${toolClassRows}
+    </div>
+    <div class="card">
+      <div class="section-title" style="font-size:15px;margin-bottom:4px;">💡 How Tools Are Helping — By Class</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:14px;">Mood score before → after each tool (out of 10). 🏆 = best performing tool per class.</div>
+      ${toolEffectRows}
     </div>
   `;
 }
